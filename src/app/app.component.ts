@@ -1,7 +1,10 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { Subscription } from 'rxjs';
+import { LoginComponent } from './login/login.component';
 import { TokenStorageService } from './_services/token-storage.service';
 import { EventBusService } from './_shared/event-bus.service';
+import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -14,7 +17,7 @@ export class AppComponent implements OnInit, OnDestroy {
   showModeratorBoard = false;
   username?: string;
   eventBusSub?: Subscription;
-  constructor(private tokenStorageService: TokenStorageService, private eventBusService: EventBusService) { }
+  constructor(private tokenStorageService: TokenStorageService, private eventBusService: EventBusService ,public dialog:MatDialog,private router:Router ,private route:ActivatedRoute) { }
   ngOnInit(): void {
     this.isLoggedIn = !!this.tokenStorageService.getToken();
     if (this.isLoggedIn) {
@@ -39,4 +42,11 @@ export class AppComponent implements OnInit, OnDestroy {
     this.showAdminBoard = false;
     this.showModeratorBoard = false;
   }
+  opendialoge(){
+    this.dialog.open(LoginComponent);
+  }
+  show(){
+    this.router.navigate(['login'],{relativeTo:this.route})
+  }
+
 }

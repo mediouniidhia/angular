@@ -1,7 +1,170 @@
 
+ <div class="page-heading header-text">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 section-heading">
+        <h2>Welcome  <em> To our register Page</em></h2>
+        <h1>You can register from the down of the page </h1>
+        
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ------------------------------------------------------------------------------------------------------- -->
+<div class="callback-form contact-us">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="section-heading">
+          <h2>Have a  <em>nice experience</em></h2>
+          <span>take your time well to do not forgot your information :)</span>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="contact-form">
+          <form id="contact" action="#" class="signin-form"  
+          *ngIf="!isSuccessful"
+          name="form"
+          (ngSubmit)="f.form.valid && onSubmit()"
+          #f="ngForm"
+          novalidate>
+            <div class="row">
+              <div class="col-lg-12 col-md-14 col-sm-0">
+                <fieldset>
+                  <input type="text"
+                  class="form-control"
+                   placeholder="Username" id="name"
+                  name="username"
+                  [(ngModel)]="form.username"
+                 
+                  #username="ngModel">
+                </fieldset>
+              </div>
+              <div class="alert-danger" *ngIf=" f.submitted">
+              </div>
+              <div class="col-lg-12 col-md-12 col-sm-12">
+                
+                <input
+                  type="email"
+                  class="form-control"
+                  name="email"
+                  [(ngModel)]="form.email"
+                  placeholder="email"
+                  #email="ngModel"
+                />
+                <div class="alert-danger" *ngIf=" f.submitted">
+                  
+                </div>
+              </div>
+              <div class="col-lg-12 col-md-12 col-sm-12">
+                <fieldset>
+                  <input    type="password"
+                 
+                  name="password"
+                  [(ngModel)]="form.password"
+                  placeholder="password"
+                  id="email"
+                  class="form-control"
+                  #password="ngModel"
+                  >
+                </fieldset>
+              </div>
+              
+              
+              <div class="col-lg-12">
+                <fieldset>
+                  <button type="submit" id="form-submit" class="filled-button">Signup</button>
+                </fieldset>
+              </div>
+            </div>
+            <div class="alert alert-warning" *ngIf="f.submitted && isSignUpFailed">
+              Signup failed!<br />{{ errorMessage }}
+            </div>
+          </form>
+          <div class="alert alert-success" *ngIf="isSuccessful">
+            Your registration is successful!
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
- <body>
-   
+
+<!-- ----------------------------------------------------------------------------------------------------------------- -->
+<!-- <body>
+  <div class="col-md-12">
+      <div class="card card-container">
+        
+        <form
+          *ngIf="!isSuccessful"
+          name="form"
+          (ngSubmit)="f.form.valid && onSubmit()"
+          #f="ngForm"
+          novalidate
+          
+        >
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input
+              type="text"
+              class="form-control"
+              name="username"
+              [(ngModel)]="form.username"
+             
+              #username="ngModel"
+            />
+            <div class="alert-danger" *ngIf=" f.submitted">
+              
+              
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              class="form-control"
+              name="email"
+              [(ngModel)]="form.email"
+              
+              #email="ngModel"
+            />
+            <div class="alert-danger" *ngIf=" f.submitted">
+              
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              name="password"
+              [(ngModel)]="form.password"
+              
+              #password="ngModel"
+            />
+            <div class="alert-danger" *ngIf=" f.submitted">
+             
+              
+            </div>
+          </div>
+          <div class="form-group">
+            <button class="btn btn-primary btn-block">Sign Up</button>
+          </div>
+          <div class="alert alert-warning" *ngIf="f.submitted && isSignUpFailed">
+            Signup failed!<br />{{ errorMessage }}
+          </div>
+        </form>
+        <div class="alert alert-success" *ngIf="isSuccessful">
+          Your registration is successful!
+        </div>
+      </div>
+    </div>
+  
+  </body> -->
+<!-- ----------------------------------------------------------------------------------------------------------------- -->
+<!-- <body>
 <div class="col-md-12">
     <div class="card card-container">
       
@@ -11,6 +174,7 @@
         (ngSubmit)="f.form.valid && onSubmit()"
         #f="ngForm"
         novalidate
+        
       >
         <div class="form-group">
           <label for="username">Username</label>
@@ -69,5 +233,5 @@
     </div>
   </div>
 
-</body>
+</body> -->
 

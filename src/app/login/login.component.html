@@ -1,12 +1,17 @@
-<div class="col-md-12">
+
+
+<!-- <div class="row ">
+<div class="col-md-2" >
     <div class="card card-container">
     
-      <form
+      <form class="d"
         *ngIf="!isLoggedIn"
         name="form"
         (ngSubmit)="f.form.valid && onSubmit()"
         #f="ngForm"
         novalidate
+        
+
       >
         <div class="form-group">
           <label for="username">Username</label>
@@ -64,9 +69,50 @@
       </div>
     </div>
   </div>
+</div> -->
+  <!-- ------------------------------------------------------------------------------------------------------------------ -->
+  <div class="page-heading header-text">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1>About Us</h1>
+          <span>We have over 20 years of experience</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="more-info about-info">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="more-info-content">
+            <div class="row">
+              <div class="col-md-6 align-self-center">
+                <div class="right-content">
+                  <span>our solid background on finance</span>
+                  <h2>Get to know about <em>our company</em></h2>
+                  <p>Fusce nec ultrices lectus. Duis nec scelerisque risus. Ut id tempor turpis, ac dignissim ipsum. Nulla ullamcorper, ipsum vel condimentum congue, mi odio vehicula tellus, sit amet malesuada justo sem. 
+                  <br><br>Pellentesque in sagittis lacus, vel auctor sem. Quisque eu quam eleifend, ullamcorper dui nec, luctus quam.</p>
+                  <a href="" class="filled-button">Read More</a>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="left-image">
+                  <img src="assets/images/about-image.jpg" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+<!-- ------------------------------------------------------------------------------------------------------------ -->
   <!-- <!doctype html>
-<html lang="en"> -->
-  <!-- <head>
+<html lang="en"> 
+   <head>
   	<title>Login 10</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -116,11 +162,11 @@
                   Login failed: {{ errorMessage }}
                 </div>
               </div> -->
-            <!-- </form>
+             <!-- </form>
             <div class="alert alert-success" *ngIf="isLoggedIn">
               Logged in as {{ roles }}.
-            </div> --> 
-	            <!-- <div class="form-group d-md-flex">
+            </div> 
+	             <div class="form-group d-md-flex">
 	            	<div class="w-50">
 		            	<label class="checkbox-wrap checkbox-primary">Remember Me
 									  <input type="checkbox" checked>
@@ -130,14 +176,14 @@
 								<div class="w-50 text-md-right">
 									<a href="#" style="color: #fff">Forgot Password</a>
 								</div>
-	            </div> -->
-	          <!-- </form> -->
-	          <!-- <p class="w-100 text-center">&mdash; Or Sign In With &mdash;</p>
+	            </div> 
+	           </form>
+	           <p class="w-100 text-center">&mdash; Or Sign In With &mdash;</p>
 	          <div class="social d-flex text-center">
 	          	<a href="#" class="px-2 py-2 mr-md-1 rounded"><span class="ion-logo-facebook mr-2"></span> Facebook</a>
 	          	<a href="#" class="px-2 py-2 ml-md-1 rounded"><span class="ion-logo-twitter mr-2"></span> Twitter</a>
-	          </div> -->
-		      <!-- </div>
+	          </div> 
+		       </div>
 				</div>
 			</div>
 		</div>
@@ -149,5 +195,61 @@
   <script src="js/bootstrap.min.js"></script>
   <script src="js/main.js"></script>
 
-	</body> -->
-<!-- </html> -->
+	</body> 
+ </html>  -->
+ <!-- ------------------------------------------------------------------------------------------------------------- -->
+ <div class="callback-form contact-us">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="section-heading">
+          <h2>Welcome <em> To our login Page</em></h2>
+          <span>Suspendisse a ante in neque iaculis lacinia</span>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="contact-form">
+          <form id="contact" action="#" class="signin-form"  *ngIf="!isLoggedIn"
+          name="form"
+          (ngSubmit)="f.form.valid && onSubmit()"
+          #f="ngForm">
+            <div class="row">
+              <div class="col-lg-12 col-md-14 col-sm-0">
+                <fieldset>
+                  <input type="text"
+                  class="form-control"
+                  name="username"
+                  [(ngModel)]="form.username"
+                 
+                  #username="ngModel" placeholder="Username" id="name">
+                </fieldset>
+              </div>
+              <div class="col-lg-12 col-md-12 col-sm-12">
+                <fieldset>
+                  <input    type="password"
+                  class="form-control"
+                  name="password"
+                  [(ngModel)]="form.password"
+                  placeholder="password"
+                 
+                  #password="ngModel"
+                  id="email">
+                </fieldset>
+              </div>
+              
+              
+              <div class="col-lg-12">
+                <fieldset>
+                  <button type="submit" id="form-submit" class="filled-button">login</button>
+                </fieldset>
+              </div>
+            </div>
+          </form>
+          <div class="alert alert-success" *ngIf="isLoggedIn">
+            Logged in as {{ roles }}.
+          </div> 
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

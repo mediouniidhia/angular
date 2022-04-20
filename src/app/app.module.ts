@@ -16,6 +16,9 @@ import { authInterceptorProviders } from './_helpers/auth.interceptor';
 import { TablComponent } from './tabl/tabl.component';
 import { RapportComponent } from './rapport/rapport.component';
 import { DashbordComponent } from './dashbord/dashbord.component';
+import { DdComponent } from './dd/dd.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 @NgModule({
@@ -30,13 +33,17 @@ import { DashbordComponent } from './dashbord/dashbord.component';
     BoardUserComponent,
     TablComponent,
     RapportComponent,
-    DashbordComponent
+    DashbordComponent,
+    DdComponent
   ],
+  entryComponents:[LoginComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatDialogModule,
 
   ],
   providers: [authInterceptorProviders],
